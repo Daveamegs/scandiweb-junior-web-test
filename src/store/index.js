@@ -2,7 +2,11 @@ import axios from 'axios';
 import { createStore } from 'vuex';
 import router from '@/router';
 
+
+const API_HOST = "https://dave-scandiweb.000webhostapp.com/index.php";
+
 export default createStore({
+
   // STATE
   state: {
     products: [],
@@ -80,14 +84,14 @@ export default createStore({
   // ACTIONS
   actions: {
     getAllProducts({commit}){
-      axios.get("http://localhost:80/scandiweb/public/index.php")
+      axios.get(API_HOST)
         .then((response) => {
           commit("getAllProducts", response.data);
         })
     },
 
     addProduct({commit, state}, product) {
-      axios.post("http://localhost:80/scandiweb/public/index.php", product, {
+      axios.post(API_HOST, product, {
         headers: {
           "Content-Type": "application/json"
         }
@@ -113,7 +117,7 @@ export default createStore({
 
     deleteProducts({commit, state}){
       state.selectedProducts.forEach(productID => {
-        axios.delete(`http://localhost/scandiweb/public/index.php?id=${productID}`, {
+        axios.delete(`${API_HOST}?id=${productID}`, {
           headers: {
             "Content-Type": "application/json"
           }

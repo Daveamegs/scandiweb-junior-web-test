@@ -206,7 +206,8 @@ export default {
 
             return Object.values(errors).some((error) => error)
 
-        }
+        },
+
     },
 
     computed: {
@@ -243,21 +244,25 @@ export default {
             justify-content: space-between;
             align-items: center;
         }
+
         span{
             flex: 1;
         }
+
         input, select{
             margin-left: 20px;
             height: 25px;
             flex: 3.5;
             margin-left: 20px;
         }
+        .error{
+            color: #ff0000;
+            margin-left: 25%;
+        }
 
-        // input:invalid {
-        //     border: 1px solid red;
-        // }
-
-        
+        p {
+            margin-top: 3px !important;
+        }
     }
 
     .product-desc{
@@ -266,9 +271,6 @@ export default {
 
 }
 
-.error{
-    color: #ff0000;
-    margin-left: 25%;
-}
+
 
 </style>
