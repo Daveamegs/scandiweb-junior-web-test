@@ -1,9 +1,9 @@
-import axios from 'axios';
+import axios from "../myAxios";
 import { createStore } from 'vuex';
 import router from '@/router';
 
 
-const API_HOST = "http://www.dave-scandiweb.infinityfreeapp.com/index.php";
+// const API_HOST = "http://www.dave-scandiweb.infinityfreeapp.com/index.php";
 
 export default createStore({
 
@@ -84,14 +84,14 @@ export default createStore({
   // ACTIONS
   actions: {
     getAllProducts({commit}){
-      axios.get(API_HOST)
+      axios.get("/data")
         .then((response) => {
           commit("getAllProducts", response.data);
         })
     },
 
     addProduct({commit, state}, product) {
-      axios.post(API_HOST, product, {
+      axios.post("/index.php", product, {
         headers: {
           "Content-Type": "application/json"
         }
@@ -117,7 +117,7 @@ export default createStore({
 
     deleteProducts({commit, state}){
       state.selectedProducts.forEach(productID => {
-        axios.delete(`${API_HOST}?id=${productID}`, {
+        axios.delete(`/index.php?id=${productID}`, {
           headers: {
             "Content-Type": "application/json"
           }
