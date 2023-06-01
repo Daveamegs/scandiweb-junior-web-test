@@ -3,7 +3,7 @@ import { createStore } from 'vuex';
 import router from '@/router';
 
 
-const API_HOST = "http://www.dave-scandiweb.infinityfreeapp.com/index.php";
+const API_HOST = "https://dave-scandiweb.000webhostapp.com/index.php";
 
 export default createStore({
 
