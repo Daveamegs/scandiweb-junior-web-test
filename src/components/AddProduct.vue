@@ -1,5 +1,5 @@
 <template>
-     <form id="product-form">
+     <form id="product_form">
         <div class="input-div">
             <label for="sku">
                 <span>SKU: </span>
