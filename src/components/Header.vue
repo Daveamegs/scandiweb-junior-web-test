@@ -1,11 +1,15 @@
 <template>
+    <!-- Header Section -->
     <header id="header">
+        <!-- Display Product Add text if length is greater than 0 -->
         <h2 
             class="header-title" 
             v-if="productAddText"
         >
             {{ productAddText }}
         </h2>
+
+        <!-- Display Product List text if length is greater than 0 -->
         <h2 
             class="header-title" 
             v-if="productListText"
@@ -13,7 +17,7 @@
             {{ productListText }}
         </h2>
 
-
+        <!-- Show div if the add and delete button text are present || both length is greater than 0 -->
         <div 
             class="btn-div " 
             v-if="addBtnText && deleteBtnText"
@@ -24,6 +28,7 @@
             <button class="delete-btn" @click="deleteProducts">{{ deleteBtnText }}</button>
         </div>
 
+        <!-- Display div if save and cancel button text are present || both lengths are greater than 0 -->
         <div class="btn-div " v-if="saveBtnText && cancelBtnText">
             <button 
                 class="save-btn"
