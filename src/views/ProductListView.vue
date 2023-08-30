@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <Header productListText="Product List" addBtnText="ADD" deleteBtnText="Mass Delete" />
+    <Header productListText="Product List" addBtnText="ADD" deleteBtnText="MASS DELETE" />
     <hr>
     <div class="home-list">
     <ProductCard />

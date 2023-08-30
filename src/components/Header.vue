@@ -26,7 +26,8 @@
 
         <div class="btn-div " v-if="saveBtnText && cancelBtnText">
             <button 
-                class="save-btn" 
+                class="save-btn"
+                id="delete-product-btn"
                 @click="addProduct" 
                 type="submit"
             >

@@ -4,10 +4,10 @@
             <label for="sku">
                 <span>SKU: </span>
                 <input 
-                    type="text" 
-                    name="sku" 
-                    id="sku" 
-                    v-model="formData.SKU" 
+                    type="text"
+                    name="sku"
+                    id="sku"
+                    v-model="formData.SKU"
                     placeholder="Please Insert Product SKU"
                     @input="validateForm"
                 >
@@ -54,8 +54,8 @@
                 >
                     <option value="" selected>--Please Select Product Type--</option>
                     <option value="DVD" id="DVD">DVD</option>
-                    <option value="furniture" id="Furniture">Furniture</option>
                     <option value="book" id="Book">Book</option>
+                    <option value="furniture" id="Furniture">Furniture</option>
                 </select>
             </label>
             <p v-if="this.errors.productType" class="error">{{ this.errors.productType }}</p>
